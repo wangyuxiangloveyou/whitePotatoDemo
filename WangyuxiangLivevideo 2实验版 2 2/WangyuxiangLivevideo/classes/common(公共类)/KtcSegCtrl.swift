@@ -2,8 +2,8 @@
 //  KtcSegCtrl.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/4.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/11/4.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit
@@ -38,31 +38,25 @@ class KtcSegCtrl: UIView {
             //修改下划线的位置
             UIView.animateWithDuration(0.25) {
                 self.linView?.frame.origin.x=(self.linView?.frame.size.width)!*CGFloat(self.selectIndex)
-                
             }
-            
         }
     }
     
     //重新给一个初始化方法
     init(frame: CGRect,titleArray:Array<String>) {
         super.init(frame: frame)
-        
         if titleArray.count>0{
             creatBtns(titleArray)
         }
-        
-        
     }
     
     //创建按钮
     func creatBtns(titleArray:Array<String>){
         //按钮宽度
         let w=bounds.size.width/CGFloat(titleArray.count)
-        
         for i in 0...titleArray.count-1{
-            //循坏创建按钮
             
+            //循坏创建按钮
             let frame=CGRectMake(w*CGFloat(i), 0, w, bounds.size.height)
             let btn=KtcSegBtn(frame: frame)
             //默认选择第一个
@@ -71,7 +65,6 @@ class KtcSegCtrl: UIView {
             }else{
                 btn.clicked=false
             }
-            
             btn.config(titleArray[i])
             
             //添加点击事件
@@ -83,35 +76,25 @@ class KtcSegCtrl: UIView {
         linView=UIImageView(frame: CGRect(x: 0, y: bounds.size.height-2, width: w, height: 2))
         linView?.backgroundColor=UIColor.orangeColor()
         linView!.image=UIImage(named:"navBtn_bag")
-        
         addSubview(linView!)
-        
-        
-        
     }
+    
     func cilckBtn(btn:KtcSegBtn){
         let index=btn.tag-300
         //修改选中的ui
         selectIndex=index
         delegate?.segCtrl(self, didClickBtnIndex: index)
-        
-        
-        
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
 }
 
-
-
-
 //自定制按钮
-
 class KtcSegBtn: UIControl {
     private var titleLabel:UILabel?
-    
     //设置选中状态
     var clicked:Bool=false{
         didSet{
@@ -123,6 +106,7 @@ class KtcSegBtn: UIControl {
             }
         }
     }
+    
     func config(title:String?){
         titleLabel?.text=title
     }

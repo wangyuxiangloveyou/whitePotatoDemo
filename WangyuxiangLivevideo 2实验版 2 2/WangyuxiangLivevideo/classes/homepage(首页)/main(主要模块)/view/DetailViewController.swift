@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/2.
+//  Created by wyx on 16/11/2.
 //  Copyright © 2016年 zhb. All rights reserved.
 //
 
@@ -29,9 +29,8 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
         //加载请求
         webView.loadRequest(request)
         webView.delegate=self
-        //self.hidesBottomBarWhenPushed=false
-        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -2,8 +2,8 @@
 //  ProfileViewController.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/10/25.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/10/25.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,6 @@ class ProfileViewController: BaseViewController {
         btn.setBackgroundImage(UIImage(named: "default_head_51x51_@1x.png"), forState: .Normal)
         btn.addTarget(self, action: #selector(btnClick(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(btn)
-        
         let label1=UILabel(frame: CGRect(x: 140, y: 110, width: 100, height: 30))
         label1.text="马上登录"
         label1.textColor=UIColor.whiteColor()
@@ -54,7 +53,6 @@ class ProfileViewController: BaseViewController {
         }
         
         let btn4=UIButton(frame: CGRect(x:0, y: 280, width: screenWidth-100, height: 40))
-        //btn4.backgroundColor=UIColor.whiteColor()
         btn4.addTarget(self, action: #selector(btn4Click(_:)), forControlEvents: .TouchUpInside)
         btn4.setTitle("搜索附近的影片", forState: .Normal)
         btn4.setTitleColor(UIColor.blackColor(), forState: .Normal)
@@ -64,7 +62,6 @@ class ProfileViewController: BaseViewController {
         
         
         let scrollView=UIScrollView(frame: CGRect(x: 0, y: 320, width: screenWidth, height: 400))
-        // scrollView.backgroundColor=UIColor.init(patternImage: UIImage(named: "witch_206x250_@2x.png")!)
         scrollView.contentSize=CGSize(width: screenWidth, height: 650)
         scrollView.pagingEnabled=true
         let image=UIImageView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 500))
@@ -119,12 +116,9 @@ class ProfileViewController: BaseViewController {
     
     func btn4Click(btn4:UIButton){
         let view1=EnshrineViewController()
-           view1.hidesBottomBarWhenPushed=true
+        view1.hidesBottomBarWhenPushed=true
         navigationController?.pushViewController(view1, animated: true)
-        
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

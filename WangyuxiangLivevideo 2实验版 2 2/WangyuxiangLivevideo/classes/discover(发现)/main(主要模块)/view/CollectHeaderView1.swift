@@ -2,8 +2,8 @@
 //  CollectHeaderView1.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/10.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/11/10.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit
@@ -12,13 +12,9 @@ class CollectHeaderView1: UICollectionReusableView {
     
     //点击事件
     var jumpClosure: IngreJumpClosure?
-    
-    //var allModel:HomePageschannelpagemodules?
-    //数据
     var allModel1:indexPageschannelpagemodules? {
         didSet {
             configText(allModel1!.title!)
-            
         }
     }
     
@@ -42,27 +38,21 @@ class CollectHeaderView1: UICollectionReusableView {
         titleLabel!.font=UIFont.boldSystemFontOfSize(7)
         titleLabel!.font=UIFont.systemFontOfSize(19)
         addSubview(titleLabel!)
-        
         //图片
         let image=UIImage(named: "more_icon")
         imageView=UIImageView(image:image)
         bgView.addSubview(imageView!)
-        
-        
     }
+    
     private func configText(text: String) {
         titleLabel?.text=allModel1?.title
         //print(allModel?.title)
         //修改位置
         titleLabel?.frame=CGRectMake(60, 10, 120, 44)
         imageView?.frame=CGRectMake(titleLabel!.frame.origin.x-50, 0, iconW, iconW)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
 }

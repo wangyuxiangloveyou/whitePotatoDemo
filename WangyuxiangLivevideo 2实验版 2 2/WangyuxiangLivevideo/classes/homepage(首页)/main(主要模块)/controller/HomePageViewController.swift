@@ -2,8 +2,8 @@
 //  HomePageViewController.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/10/24.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/10/24.
+//  Copyright © 2016年 . All rights reserved.
 //,navigationprotocol,RefreshProtocol
 
 import UIKit
@@ -26,7 +26,6 @@ class HomePageViewController: BaseViewController{
         automaticallyAdjustsScrollViewInsets = false
         configUI()
         self.homeView!.loadData(currentUrl)
-  
     }
     
     func configUI(){
@@ -67,7 +66,6 @@ class HomePageViewController: BaseViewController{
     
     func segmentedClick(segControl:UISegmentedControl){
         let index=Int(segControl.selectedSegmentIndex)
-        
         switch index {
         case 0:
             currentUrl = movieUrl
@@ -107,13 +105,10 @@ class HomePageViewController: BaseViewController{
         }
     }
     
-  
-
-
-override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    
-}
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
 }
 
 

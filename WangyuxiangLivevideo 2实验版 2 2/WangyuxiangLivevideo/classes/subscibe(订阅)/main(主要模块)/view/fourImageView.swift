@@ -2,7 +2,7 @@
 //  fourImageView.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/7.
+//  Created by wyx on 16/11/7.
 //  Copyright © 2016年 zhb. All rights reserved.
 //
 
@@ -14,13 +14,11 @@ class fourImageView: UIView {
     var colletionView:UICollectionView!
     //var dataArray:[[FourImageModel]]=[]
     var jumpClosure:IngreJumpClosure?
-  var addClosure:((String)->())!
+    var addClosure:((String)->())!
     var fourModel:FourImageModel?{
         didSet{
             colletionView?.reloadData()
-            
         }
-        
     }
     
     override init(frame: CGRect) {
@@ -29,32 +27,13 @@ class fourImageView: UIView {
         configUI4()
     }
     
-    
-    
     func loadData4() {
         Alamofire.request(.GET, fourUrl, parameters: nil, encoding: ParameterEncoding.URL, headers:nil).responseData { (reaponse) in
             let data = reaponse.data
             let model = FourImageModel.parseData(data!)
             self.fourModel = model
-            
         }
     }
-    //    func loadData5(){
-    //        Alamofire.request(.GET,fourUrl).responseJSON(completionHandler: {[unowned self] (response) in
-    //            if response.result.error==nil{
-    //
-    //                let dic=response.result.value as! [String:AnyObject]
-    //                let appArray=dic ["data"] as! [[String:AnyObject]]
-    //                for dic in appArray{
-    //                    let model=[fourModel2]()
-    //                   let ablumArray=
-    //                    self.dataArray.append(model)
-    //                    print(self.dataArray[2].weekday)
-    //                }
-    //                self.colletionView!.reloadData()
-    //            }
-    //            })
-    //    }
     
     func configUI4(){
         let flowLayout=UICollectionViewFlowLayout()
@@ -76,22 +55,16 @@ class fourImageView: UIView {
          */
         colletionView.registerNib(UINib(nibName: "FourCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FourCollectionViewCellId")
         colletionView.registerClass(HeaderReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
-
         colletionView.backgroundColor=UIColor.whiteColor()
         addSubview(colletionView)
-        
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 extension fourImageView:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
-    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         if fourModel?.data?.count != nil {
             return (fourModel?.data?.count)!
@@ -106,19 +79,17 @@ extension fourImageView:UICollectionViewDataSource,UICollectionViewDelegateFlowL
         if self.fourModel?.data![section].album!.count != nil {
             return (self.fourModel?.data![section].album!.count)!
         }
-        
         return 0
     }
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         if indexPath.section == 0{
             return CGSize(width: screenWidth/3-20, height: 190)
         }else if indexPath.section == 1{
             return CGSize(width: screenWidth/2-20, height: 180)
-            
         }else if indexPath.section == 2{
             return CGSize(width: screenWidth/4-20, height: 190)
         }
-        
         return CGSize(width: screenWidth/3-20, height: 190)
     }
     
@@ -133,46 +104,33 @@ extension fourImageView:UICollectionViewDataSource,UICollectionViewDelegateFlowL
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell=colletionView.dequeueReusableCellWithReuseIdentifier("FourCollectionViewCellId", forIndexPath: indexPath) as! FourCollectionViewCell
         cell.titleLabel.text = self.fourModel?.data![indexPath.section].album?[indexPath.row].title
-        //print("\(self.fourModel?.data![indexPath.section].album?[indexPath.row].title)")
-        //print("\(fourModel?.data![indexPath.section].album?[indexPath.section].picurl_200_300)")
         cell.updataLabel.text=self.fourModel?.data![indexPath.section].album?[indexPath.row].update_episode
         cell.subLabel.text=self.fourModel?.data![indexPath.section].album?[indexPath.row].sub_cat
         if fourModel?.data![indexPath.section].album?[indexPath.row].picurl_200_300 != nil{
-             cell.imageName.kf_setImageWithURL(NSURL(string: (fourModel?.data![indexPath.section].album?[indexPath.row].picurl_200_300)!), placeholderImage: UIImage(named: "38bg_failed_black@2x"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
-//            cell.imageName.kf_setImageWithURL(NSURL(string:(fourModel?.data![indexPath.section].album?[indexPath.row].picurl_200_300)!))
-            
+            cell.imageName.kf_setImageWithURL(NSURL(string: (fourModel?.data![indexPath.section].album?[indexPath.row].picurl_200_300)!), placeholderImage: UIImage(named: "38bg_failed_black@2x"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
         }
-              return cell
-        
-        
+        return cell
     }
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
         _=fourModel?.data![indexPath.section].album?[indexPath.row]
-        
         if  jumpClosure != nil{
             urlstring="http://www.tudou.com/programs/view/gvB83qQ-x2E"
             jumpClosure!(urlstring!)
         }
-//        if  addClosure != nil{
-//            url=fourModel?.data![indexPath.section].album?[indexPath.row].picurl_200_300
-//            
-//        }
-//        
-
     }
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: 320, height: 54)
     }
+    
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader{
             let header=colletionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! HeaderReusableView
             header.backgroundColor=UIColor.blackColor()
             header.FourDataHeaderModel = fourModel?.data![indexPath.section]
-             return header
+            return header
         }
         return UICollectionReusableView()
     }
-    
-
 }

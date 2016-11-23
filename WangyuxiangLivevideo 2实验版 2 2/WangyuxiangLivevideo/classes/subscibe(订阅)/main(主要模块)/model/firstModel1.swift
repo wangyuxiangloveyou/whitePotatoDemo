@@ -2,7 +2,7 @@
 //  firstModel1.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/7.
+//  Created by wyx on 16/11/7.
 //  Copyright © 2016年 zhb. All rights reserved.
 //
 
@@ -15,10 +15,7 @@ class firstModel1: NSObject {
     var itemId:NSNumber?
     var  playtimes:String?
     var playtimes_str:String?
-   
-   
-
+    
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
-    }
+        }
 }

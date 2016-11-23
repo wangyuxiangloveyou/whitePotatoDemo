@@ -2,8 +2,8 @@
 //  CollectView.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/10.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/11/10.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class CollectView: UIView {
     var collectModel11:CollectModel?{
         didSet{
             colletionView?.reloadData()
-            }
+        }
     }
     
     override init(frame: CGRect) {
@@ -56,7 +56,7 @@ class CollectView: UIView {
         colletionView.registerClass(CollectHeaderView1.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
         colletionView.backgroundColor=UIColor.whiteColor()
         addSubview(colletionView)
-        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -85,7 +85,7 @@ extension CollectView:UICollectionViewDataSource,UICollectionViewDelegateFlowLay
             return CGSize(width:screenWidth/3-16, height: (screenWidth/3-20)*1.7)
         }else {
             return CGSize(width: screenWidth/2-16, height: (screenWidth/2-20)*0.75)
-            }
+        }
     }
     
     /*返回第section组，所有cell组合到一起后，上下左右的距离
@@ -101,10 +101,11 @@ extension CollectView:UICollectionViewDataSource,UICollectionViewDelegateFlowLay
         cell.titleLabel.text = self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].title
         cell.updataLabel.text=self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].sub_title
         cell.subLabel.text=self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_b_r_title
+        
         if self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_200_300 != nil && indexPath.section == 3 || indexPath.section == 6 && self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_200_300 != nil{
             let url=NSURL(string: (self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_200_300!)!)
             cell.imageName.kf_setImageWithURL(url, placeholderImage: UIImage(named: "38bg_failed_black@2x"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
-            }else if self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_448_252 != nil{
+        }else if self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_448_252 != nil{
             let url1=NSURL(string: (self.collectModel11?.index_page_modules![indexPath.section].cards_inf?![indexPath.row].image_448_252!)!)
             cell.imageName.kf_setImageWithURL(url1, placeholderImage: UIImage(named: "38bg_failed_black@2x"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
         }
@@ -114,13 +115,12 @@ extension CollectView:UICollectionViewDataSource,UICollectionViewDelegateFlowLay
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if ((collectModel11!.index_page_modules![indexPath.section].cards_inf!![indexPath.row].skip_inf?.video_id) != nil){
             urlstring = "http://www.tudou.com/programs/view/" + (collectModel11!.index_page_modules![indexPath.section].cards_inf!![indexPath.row].skip_inf?.video_id)!
-            
-        }else if (collectModel11!.index_page_modules![indexPath.section].cards_inf!![indexPath.row].skip_inf?.skip_url) != nil{
+            }else if (collectModel11!.index_page_modules![indexPath.section].cards_inf!![indexPath.row].skip_inf?.skip_url) != nil{
             urlstring=collectModel11!.index_page_modules![indexPath.section].cards_inf!![indexPath.row].skip_inf?.skip_url
         }
         if jumpClosure != nil{
             jumpClosure!(urlstring!)
-            }
+        }
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

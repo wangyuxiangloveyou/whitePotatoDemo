@@ -2,8 +2,8 @@
 //  EnterViewController.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/16.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/11/16.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,6 @@ class EnterViewController: UIViewController,navigationprotocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor=UIColor.whiteColor()
         addBarButton("登录", bgImageName: nil, postion: .left, select: #selector(LeftClick(_:)))
         addBarButton("注册", bgImageName: nil, postion: .right, select: #selector(rightClick(_:)))
@@ -30,7 +29,6 @@ class EnterViewController: UIViewController,navigationprotocol {
         textFile1.placeholder="请输入密码"
         view.addSubview(textFile1)
         
-        
         let btn=UIButton()
         view.addSubview(btn)
         btn.snp_makeConstraints { (make) in
@@ -42,18 +40,12 @@ class EnterViewController: UIViewController,navigationprotocol {
         btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
         btn.setTitle("登录", forState: .Normal)
         btn.titleLabel?.textAlignment = .Left
-        
-        
-        
-        
-        
-        
-        
-        
     }
+    
     func LeftClick(lBtn:UIButton){
         
     }
+    
     func rightClick(rBtn:UIButton){
         
     }

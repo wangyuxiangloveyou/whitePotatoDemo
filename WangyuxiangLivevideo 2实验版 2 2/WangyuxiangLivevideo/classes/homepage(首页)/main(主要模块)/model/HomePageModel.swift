@@ -2,8 +2,8 @@
 //  HomePageModel.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/10/21.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/10/21.
+//  Copyright © 2016年 . All rights reserved.
 //channel_page_modules
 
 import UIKit
@@ -35,18 +35,18 @@ class HomePageModel: NSObject {
             HomePageArray3.append(HomeModel)
         }
         model.channel_page_modules=HomePageArray3
-        
         return model
     }
 }
+
 //第一组
 class HomePageslidearea:NSObject{
     var slideareaArray:Array<HomePagesCardsIf>!
     var cards_inf:String?
+    
     // 解析
     class func parseModel(json:JSON)->HomePageslidearea{
         let model=HomePageslidearea()
-        
         //滑动页数据
         var tmplideareaArray=Array<HomePagesCardsIf>()
         for (_, subjson)in json["cards_inf"]{
@@ -77,22 +77,20 @@ class HomePagesCardsIf:NSObject{
         model.image_200_300=json["image_200_300"].string
         model.image_800_450=json["image_800_450"].string
         model.skip_inf=skipinfobject.parseModel(json["skip_inf"])
-      
         return model
     }
 }
+
 class skipinfobject:NSObject{
-    
     var video_id:String?
     var skip_url:String?
+    
     // 解析
     class func parseModel(json:JSON)->skipinfobject{
         let model=skipinfobject()
         model.video_id=json["video_id"].string
         model.skip_url=json["skip_url"].string
-        
-             return model
-        
+        return model
     }
 }
 
@@ -101,42 +99,37 @@ class HomePageschannelpagelabels:NSObject{
     var  label_title:String?
     var  label_type:String!
     var  label_id:NSNumber?
-     var brief_filter:NSNumber?
+    var brief_filter:NSNumber?
     var  skip_inf:skipinfobject3?
-
+    
     //解析
     class func parseModel(json:JSON)->HomePageschannelpagelabels{
         let model=HomePageschannelpagelabels()
         model.label_title=json["label_title"].string
         model.label_id=json["label_id"].number
         model.brief_filter=json["brief_filter"].number
-   model.skip_inf=skipinfobject3.parseModel(json["skip_inf"])
-        //print(model.label_title)
-        //print(model.label_id)
+        model.skip_inf=skipinfobject3.parseModel(json["skip_inf"])
         return model
     }
 }
 
 class skipinfobject3:NSObject{
-    
     var brief_filter:String?
-       // 解析
+    
+    // 解析
     class func parseModel(json:JSON)->skipinfobject3{
-    let model=skipinfobject3()
-    model.brief_filter=json["brief_filter"].string
-   // print(model.brief_filter)
+        let model=skipinfobject3()
+        model.brief_filter=json["brief_filter"].string
+        // print(model.brief_filter)
         return model
-        
     }
 }
-
-
-
 
 //第三组
 class HomePageschannelpagemodules:NSObject{
     var  title:String!
     var  cards_inf:Array<Homescardsinf2>?!
+    
     //解析
     class func parseModel(json:JSON)->HomePageschannelpagemodules{
         let model=HomePageschannelpagemodules()
@@ -147,8 +140,6 @@ class HomePageschannelpagemodules:NSObject{
             cardsinfArray.append(CardsIfModel)
         }
         model.cards_inf=cardsinfArray
-        
-      
         return model
     }
 }
@@ -160,6 +151,7 @@ class Homescardsinf2:NSObject{
     var  image_200_300:String!
     var  image_448_252:String!
     var   skip_inf:skipinfobject2?
+    
     //解析
     class func parseModel(json:JSON)->Homescardsinf2{
         let model=Homescardsinf2()
@@ -169,29 +161,23 @@ class Homescardsinf2:NSObject{
         model.image_200_300=json["image_200_300"].string
         model.image_448_252=json["image_448_252"].string
         model.skip_inf=skipinfobject2.parseModel(json["skip_inf"])
-           return model
-        
+        return model
     }
-    }
+}
 
 class skipinfobject2:NSObject{
-    
     var video_id:String?
     var title:String?
     var skip_type:String?
     var skip_url:String?
+    
     // 解析
     class func parseModel(json:JSON)->skipinfobject2{
         let model=skipinfobject2()
-        
-        
         model.skip_type=json["skip_type"].string
-         model.video_id=json["video_id"].string
+        model.video_id=json["video_id"].string
         model.skip_url=json["skip_url"].string
-             
-
         return model
-        
     }
 }
 

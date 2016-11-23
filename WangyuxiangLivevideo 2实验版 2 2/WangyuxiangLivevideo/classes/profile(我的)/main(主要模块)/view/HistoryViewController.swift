@@ -3,8 +3,8 @@
 //  HistoryViewController.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/16.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/11/16.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit

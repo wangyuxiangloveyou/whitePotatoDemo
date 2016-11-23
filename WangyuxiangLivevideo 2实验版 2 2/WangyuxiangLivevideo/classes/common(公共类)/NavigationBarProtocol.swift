@@ -2,8 +2,8 @@
 //  NavigationBarProtocol.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/10/24.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/10/24.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import Foundation
@@ -52,11 +52,9 @@ extension navigationprotocol where Self:UIViewController{
         }else{
             if navigationItem.rightBarButtonItems != nil{
                 navigationItem.rightBarButtonItems=navigationItem.rightBarButtonItems!+[tabBUttonItem]
-                
             }else{
                 navigationItem.rightBarButtonItems=[tabBUttonItem]
-                
             }
         }
-}
+    }
 }

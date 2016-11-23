@@ -2,7 +2,7 @@
 //  HeaderReusableView.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/9.
+//  Created by wyx on 16/11/9.
 //  Copyright © 2016年 zhb. All rights reserved.
 //
 
@@ -16,7 +16,6 @@ class HeaderReusableView: UICollectionReusableView {
     var  FourDataHeaderModel:dataArray? {
         didSet {
             configText((FourDataHeaderModel?.weekday)!)
-            
         }
     }
     
@@ -45,23 +44,16 @@ class HeaderReusableView: UICollectionReusableView {
         let image=UIImage(named: "more_icon")
         imageView=UIImageView(image:image)
         bgView.addSubview(imageView!)
-        
-        
     }
+    
     private func configText(text: String) {
         titleLabel?.text=("发布:")+(FourDataHeaderModel?.weekday)!+("     时间:")+(FourDataHeaderModel?.week)!
-        
         //修改位置
         titleLabel?.frame=CGRectMake(60, 10, 200, 44)
         imageView?.frame=CGRectMake(titleLabel!.frame.origin.x-50, 0, iconW, iconW)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
-    
 }

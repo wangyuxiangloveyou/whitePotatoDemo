@@ -43,6 +43,7 @@ class SubscibeViewController: BaseViewController {
         scrollView!.snp_makeConstraints { (make) in
             make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))
         }
+        
         //容器视图
         let containerView=UIView.createView()
         scrollView!.addSubview(containerView)
@@ -59,7 +60,7 @@ class SubscibeViewController: BaseViewController {
             (str) in
             let web=FourDetailViewController1()
             urlstring=str
-             web.hidesBottomBarWhenPushed=true
+            web.hidesBottomBarWhenPushed=true
             self.navigationController?.pushViewController(web, animated: true)
         }
         firstView?.snp_makeConstraints(closure: { (make) in
@@ -76,7 +77,7 @@ class SubscibeViewController: BaseViewController {
             (str) in
             let web=DetailViewController()
             urlstring=str
-             web.hidesBottomBarWhenPushed=true
+            web.hidesBottomBarWhenPushed=true
             self.navigationController?.pushViewController(web, animated: true)
         }
         secondView?.snp_makeConstraints(closure: { (make) in
@@ -94,7 +95,7 @@ class SubscibeViewController: BaseViewController {
             (str) in
             let web=DetailViewController()
             urlstring=str
-             web.hidesBottomBarWhenPushed=true
+            web.hidesBottomBarWhenPushed=true
             self.navigationController?.pushViewController(web, animated: true)
         }
         thirdView?.snp_makeConstraints(closure: { (make) in
@@ -112,7 +113,7 @@ class SubscibeViewController: BaseViewController {
             (str) in
             let web=DetailViewController()
             urlstring=str
-             web.hidesBottomBarWhenPushed=true
+            web.hidesBottomBarWhenPushed=true
             self.navigationController?.pushViewController(web, animated: true)
         }
         fourView?.snp_makeConstraints(closure: { (make) in

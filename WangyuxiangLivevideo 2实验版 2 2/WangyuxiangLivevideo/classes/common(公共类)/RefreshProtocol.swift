@@ -2,19 +2,17 @@
 //  RefreshProtocol.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/10/24.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/10/24.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import Foundation
 import UIKit
 import MJRefresh
 
-
 protocol RefreshProtocol:NSObjectProtocol {
     func addRefresh(header:(()->())?,footer:(()->())?)
 }
-
 
 extension RefreshProtocol where Self: UITableViewController{
     func addRefresh(header:(()->())?=nil,footer:(()->())?=nil){

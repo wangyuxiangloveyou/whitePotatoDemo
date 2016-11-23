@@ -2,16 +2,15 @@
 //  HomePageModel.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/10/21.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/10/21.
+//  Copyright © 2016年 . All rights reserved.
 //channel_page_modules
 
 import UIKit
 import SwiftyJSON
 
 class CollectModel: NSObject {
-   var index_page_modules:Array<indexPageschannelpagemodules>?
-  
+    var index_page_modules:Array<indexPageschannelpagemodules>?
     //解析
     class func parseData(data:NSData)->CollectModel{
         let json=JSON(data:data)
@@ -23,7 +22,6 @@ class CollectModel: NSObject {
             indexPageArray3.append(indexModel)
         }
         model.index_page_modules=indexPageArray3
-        
         return model
     }
 }
@@ -65,12 +63,10 @@ class indexcardsinf2:NSObject{
         model.bottom_title=json["bottom_title"].string
         model.skip_inf=Indexskip.parseModel(json["skip_inf"])
         return model
-        
     }
 }
 
 class Indexskip:NSObject{
-    
     var video_id:String?
     var title:String?
     var skip_type:String?
@@ -78,15 +74,10 @@ class Indexskip:NSObject{
     // 解析
     class func parseModel(json:JSON)->Indexskip{
         let model=Indexskip()
-        
-        
         model.skip_type=json["skip_type"].string
         model.video_id=json["video_id"].string
         model.skip_url=json["skip_url"].string
-        
-        
         return model
-        
     }
 }
 

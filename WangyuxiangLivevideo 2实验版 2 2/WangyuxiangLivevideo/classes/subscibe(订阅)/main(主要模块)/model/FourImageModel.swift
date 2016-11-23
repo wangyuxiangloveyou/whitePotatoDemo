@@ -2,7 +2,7 @@
 //  FourImageModel.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/8.
+//  Created by wyx on 16/11/8.
 //  Copyright © 2016年 zhb. All rights reserved.
 //
 
@@ -20,11 +20,11 @@ class FourImageModel: NSObject {
         var array1=[dataArray]()
         for (_, subjson)in json ["data"]{
             let datamodel=dataArray.parseModel(subjson)
-         array1.append(datamodel)
+            array1.append(datamodel)
         }
         model.data=array1
-          return model
-}
+        return model
+    }
 }
 
 class dataArray:NSObject{
@@ -32,7 +32,7 @@ class dataArray:NSObject{
     var  weekday:String!
     var  week:String?
     var data:String?
-   //解析
+    //解析
     class func parseModel(json:JSON)->dataArray{
         let model=dataArray()
         model.weekday=json["weekday"].string
@@ -45,7 +45,7 @@ class dataArray:NSObject{
         }
         model.album=array2
         return model
-          }
+    }
 }
 
 class albumArray:NSObject{
@@ -66,7 +66,6 @@ class albumArray:NSObject{
         model.area_name=json["area_name"].string
         //print(model.picurl_200_300)
         return model
-        
-         }
+    }
 }
 

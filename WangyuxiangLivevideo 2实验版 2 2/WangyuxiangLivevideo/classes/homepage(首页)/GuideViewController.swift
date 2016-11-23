@@ -2,8 +2,8 @@
 //  GuideViewController.swift
 //  WangyuxiangLivevideo
 //
-//  Created by qianfeng on 16/11/9.
-//  Copyright © 2016年 zhb. All rights reserved.
+//  Created by wyx on 16/11/9.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,6 @@ class GuideViewController: UIViewController {
     
     func config(){
         let scrollView=UIScrollView(frame: UIScreen.mainScreen().bounds)
-        //print(UIScreen.mainScreen().bounds)
         scrollView.pagingEnabled=true
         view.backgroundColor=UIColor.grayColor()
         view.addSubview(scrollView)
@@ -33,13 +32,11 @@ class GuideViewController: UIViewController {
             let tmpImageView=UIImageView(frame: imageView.bounds)
             tmpImageView.image=UIImage(named:NSString(format:"guideImage%ld_640x960_@1x.png", i) as String )
             imageView.addSubview(tmpImageView)
-            
             if i==3{
                 imageView.userInteractionEnabled=true
                 // 按钮
                 let btn=UIButton(type: .Custom)
                 btn.frame=CGRect(x: 150, y: screenHeight-240, width: 170, height: 200)
-                
                 btn.addTarget(self, action: #selector(clickBtn), forControlEvents: .TouchUpInside)
                 imageView.addSubview(btn)
             }
