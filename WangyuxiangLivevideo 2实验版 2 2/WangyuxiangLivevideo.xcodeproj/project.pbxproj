@@ -176,6 +176,7 @@
 		BC16EDCD1DD0B07A00E9D08B /* firstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstCell.swift; sourceTree = "<group>"; };
 		BC16EDCE1DD0B07A00E9D08B /* firstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = firstCell.xib; sourceTree = "<group>"; };
 		BC2547C41DBE30E80090C718 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BC3C7E3F1DE6A2D0006AB0DC /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		BC5EFF591DC8519E00A467AE /* TwoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoCell.swift; sourceTree = "<group>"; };
 		BC5EFF5A1DC8519E00A467AE /* TwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoCell.xib; sourceTree = "<group>"; };
 		BC682EE51DBF5E110025B976 /* ic_tab_discover_27x27_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tab_discover_27x27_@2x.png"; sourceTree = "<group>"; };
@@ -565,6 +566,7 @@
 		BCF3FE291DBA20770015EDCD /* WangyuxiangLivevideo */ = {
 			isa = PBXGroup;
 			children = (
+				BC3C7E3F1DE6A2D0006AB0DC /* BridgeHeader.h */,
 				BCF3FE2A1DBA20770015EDCD /* AppDelegate.swift */,
 				BCF3FE2C1DBA20770015EDCD /* ViewController.swift */,
 				BCF3FE2E1DBA20770015EDCD /* Main.storyboard */,
@@ -1241,6 +1243,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = WangyuxiangLivevideo/BridgeHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1279,6 +1282,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = WangyuxiangLivevideo/BridgeHeader.h;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

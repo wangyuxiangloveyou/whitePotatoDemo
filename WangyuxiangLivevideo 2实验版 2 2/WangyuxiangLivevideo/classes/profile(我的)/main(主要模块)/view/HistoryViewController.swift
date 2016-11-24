@@ -13,6 +13,9 @@ class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let mapView = MAMapView(frame: view.bounds)
+      
+        view.addSubview(mapView)
 
         // Do any additional setup after loading the view.
     }

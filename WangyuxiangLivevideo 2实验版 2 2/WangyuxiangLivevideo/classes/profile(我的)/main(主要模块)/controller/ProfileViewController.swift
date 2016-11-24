@@ -115,7 +115,7 @@ class ProfileViewController: BaseViewController {
     }
     
     func btn4Click(btn4:UIButton){
-        let view1=EnshrineViewController()
+        let view1=HistoryViewController()
         view1.hidesBottomBarWhenPushed=true
         navigationController?.pushViewController(view1, animated: true)
     }

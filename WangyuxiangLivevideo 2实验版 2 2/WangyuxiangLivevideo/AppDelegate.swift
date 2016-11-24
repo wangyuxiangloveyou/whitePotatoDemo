@@ -12,6 +12,7 @@ import Alamofire
 import MJRefresh
 import SnapKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
        //let ud = NSUserDefaults.standardUserDefaults()
         window?.rootViewController=GuideViewController()
-        
+   AMapServices.sharedServices().apiKey = "6dbef578cdda73295a97f7bee486a9d5"
+//      [AMapServices sharedServices].apiKey =@"您的key";
+//        6dbef578cdda73295a97f7bee486a9d5
 //        let mainctrl=MainTabBarViewController()
 //        window?.rootViewController=mainctrl
         return true

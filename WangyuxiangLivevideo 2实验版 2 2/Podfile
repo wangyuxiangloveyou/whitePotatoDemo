@@ -9,5 +9,7 @@ target 'WangyuxiangLivevideo' do
     pod 'SnapKit','~>0.22.0'
     pod 'SwiftyJSON'
     pod 'XWSwiftRefresh', '~> 0.1.9'
-   
+    pod 'AMap3DMap'
+    pod 'AMapSearch'
+    pod 'AMapLocation' 
 end
