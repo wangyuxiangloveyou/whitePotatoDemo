@@ -76,6 +76,7 @@ extension subscriptionView:UITableViewDelegate,UITableViewDataSource
             urlstring=model.playUrl
             jumpClosure!(urlstring!)
         }
+        
     }
 }
 

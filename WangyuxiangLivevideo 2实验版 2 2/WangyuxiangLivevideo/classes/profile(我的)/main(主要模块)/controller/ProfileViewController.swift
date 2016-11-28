@@ -54,7 +54,7 @@ class ProfileViewController: BaseViewController {
         
         let btn4=UIButton(frame: CGRect(x:0, y: 280, width: screenWidth-100, height: 40))
         btn4.addTarget(self, action: #selector(btn4Click(_:)), forControlEvents: .TouchUpInside)
-        btn4.setTitle("搜索附近的影片", forState: .Normal)
+        btn4.setTitle("搜索电影院影片", forState: .Normal)
         btn4.setTitleColor(UIColor.blackColor(), forState: .Normal)
         btn4.setBackgroundImage(UIImage(named: "sayhi54_156x26_@2x.png"), forState: .Normal)
         btn4.titleLabel?.textAlignment = .Right
@@ -73,10 +73,10 @@ class ProfileViewController: BaseViewController {
     func btnClick(btn:UIButton){
         let view1=EnterViewController()
         view1.hidesBottomBarWhenPushed=true
-        let alter=UIAlertController(title: "已经登录了", message: "是否退出", preferredStyle: .ActionSheet)
+        let alter=UIAlertController(title: "是否要退出", message: "", preferredStyle: .ActionSheet)
         let action1=UIAlertAction(title: "退出", style: .Default, handler: {(a) in
         })
-        alter.addAction(UIAlertAction(title: "🙄", style: .Default, handler: { (a) in
+        alter.addAction(UIAlertAction(title: "否", style: .Default, handler: { (a) in
         }))
         //添加操作（即按钮）
         alter.addAction(action1)
@@ -98,9 +98,10 @@ class ProfileViewController: BaseViewController {
         navigationController?.pushViewController(view1, animated: true)
         
     }
+    
     func btn3Click(btn3:UIButton){
         if btn3.tag == 100{
-            let view1=HistoryViewController()
+            let view1=EnshrineViewController()
             view1.hidesBottomBarWhenPushed=true
             navigationController?.pushViewController(view1, animated: true)
         }else if btn3.tag==101{
