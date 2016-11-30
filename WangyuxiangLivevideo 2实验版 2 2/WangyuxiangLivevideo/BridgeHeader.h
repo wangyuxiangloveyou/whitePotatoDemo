@@ -13,5 +13,18 @@
 //搜索数据的库
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+//#import <EMSDK.h>
 
 #endif /* BridgeHeader_h */
+
+#if TARGET_OS_IPHONE
+
+#import "EMClient.h"
+#import "EMClientDelegate.h"
+
+#else
+
+#import <HyphenateLite_CN/EMClient.h>
+#import <HyphenateLite_CN/EMClientDelegate.h>
+
+#endif

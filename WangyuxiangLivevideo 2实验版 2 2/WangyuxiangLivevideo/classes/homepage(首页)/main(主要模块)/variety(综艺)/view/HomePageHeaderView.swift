@@ -17,17 +17,17 @@ class HomePageHeaderView: UIView {
         
         //文本输入框
         
-        let textField=UITextField(frame: CGRect(x: 10, y: 4, width: bounds.size.width-20, height: 30))
-        textField.placeholder="请输入要查找的名字"
-        textField.borderStyle = .RoundedRect
-        addSubview(textField)
+        let textField1=UITextField(frame: CGRect(x: 10, y: 4, width: bounds.size.width-20, height: 30))
+        textField1.placeholder="请输入要查找的名字"
+        textField1.borderStyle = .RoundedRect
+        addSubview(textField1)
         //设置搜索图片
         let image=UIImage(named: "search1")
         let imageView=UIImageView(image: image)
         imageView.frame=CGRectMake(0, 0, 15, 15)
         
-        textField.leftView=imageView
-        textField.leftViewMode = .Always
+        textField1.leftView=imageView
+        textField1.leftViewMode = .Always
         
     }
     

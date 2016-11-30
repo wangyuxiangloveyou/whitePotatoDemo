@@ -11,5 +11,13 @@ target 'WangyuxiangLivevideo' do
     pod 'XWSwiftRefresh', '~> 0.1.9'
     pod 'AMap3DMap'
     pod 'AMapSearch'
-    pod 'AMapLocation' 
+    pod 'AMapLocation'
+    pod 'HyphenateLite_CN'
+    pod 'ShareSDK3'
+    pod 'MOBFoundation'
+    pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+    pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+    pod 'ShareSDK3/ShareSDKExtension'
+
 end

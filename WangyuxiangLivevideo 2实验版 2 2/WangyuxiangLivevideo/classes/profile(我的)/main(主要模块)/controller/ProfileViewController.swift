@@ -75,6 +75,11 @@ class ProfileViewController: BaseViewController {
         view1.hidesBottomBarWhenPushed=true
         let alter=UIAlertController(title: "是否要退出", message: "", preferredStyle: .ActionSheet)
         let action1=UIAlertAction(title: "退出", style: .Default, handler: {(a) in
+            let error=EMClient.sharedClient().logout(true)
+            if error==nil{
+                let appDele=UIApplication.sharedApplication().delegate
+                appDele?.window!!.rootViewController=LoginViewController()
+            }
         })
         alter.addAction(UIAlertAction(title: "否", style: .Default, handler: { (a) in
         }))

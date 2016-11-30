@@ -7,8 +7,17 @@ PODS:
     - AMapFoundation (~> 1.2)
   - AMapSearch (4.3.0):
     - AMapFoundation (~> 1.2)
+  - HyphenateLite_CN (3.2.0)
   - Kingfisher (2.6.0)
   - MJRefresh (3.1.12)
+  - MOBFoundation (2.2.3)
+  - ShareSDK3 (3.5.2):
+    - ShareSDK3/ShareSDK (= 3.5.2)
+  - ShareSDK3/ShareSDK (3.5.2)
+  - ShareSDK3/ShareSDKExtension (3.5.2)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.5.2)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.5.2)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.5.2)
   - SnapKit (0.22.0)
   - SwiftyJSON (2.3.2)
   - XWSwiftRefresh (0.1.9)
@@ -18,8 +27,15 @@ DEPENDENCIES:
   - AMap3DMap
   - AMapLocation
   - AMapSearch
+  - HyphenateLite_CN
   - Kingfisher (~> 2.6)
   - MJRefresh
+  - MOBFoundation
+  - ShareSDK3
+  - ShareSDK3/ShareSDKExtension
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
   - SnapKit (~> 0.22.0)
   - SwiftyJSON
   - XWSwiftRefresh (~> 0.1.9)
@@ -30,12 +46,15 @@ SPEC CHECKSUMS:
   AMapFoundation: 636834a27cd003084f56b4232f3031e6a44c7e7e
   AMapLocation: dd203f76b034ef5cb546600f4e1ffad2a3a14072
   AMapSearch: c90cc018a6c5281af17af6058ca99218a4d4b442
+  HyphenateLite_CN: b1b023ca05b254f495924711158b3112abf37c04
   Kingfisher: d84c5fd176ea86cc7b8aac65fd55feda6f70f130
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MOBFoundation: 2bc5cd7011a2db75cf2b3ceacb7f4227eec88f3e
+  ShareSDK3: 08ed714e2bbdcd97ab60f58cb398227341dfc20a
   SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   XWSwiftRefresh: 1981ad8f7579da94c94a8e7720803f2579dcde46
 
-PODFILE CHECKSUM: 51d8a8aab81ff0562c13923ec41516e7e6c50194
+PODFILE CHECKSUM: 17ace02fc8a4600c8f7036ab46e6a51b7ce5e5dc
 
 COCOAPODS: 1.0.1

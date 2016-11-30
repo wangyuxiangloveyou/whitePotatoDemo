@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GuideViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -45,7 +46,20 @@ class GuideViewController: UIViewController {
     }
     
     func clickBtn(){
-        view.window?.rootViewController=MainTabBarViewController()
+        
+//        view.window?.rootViewController=MainTabBarViewController()
+        
+        //创建视图控制器
+        //Main.storyboard
+//        let sb=UIStoryboard.init(name: "Login", bundle: nil);
+//      let tabCtrl=sb.instantiateInitialViewController() 
+////        UITabBarController *tabCtrl = [sb instantiateInitialViewController];
+////
+//        //切换到主界面
+//        let appDele=UIApplication.sharedApplication().delegate
+//        appDele?.window!!.rootViewController=LoginViewController()
+        view.window?.rootViewController=LoginViewController()
+
     }
     
     override func didReceiveMemoryWarning() {

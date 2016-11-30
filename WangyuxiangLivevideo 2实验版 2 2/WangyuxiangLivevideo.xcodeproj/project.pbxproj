@@ -13,6 +13,8 @@
 		BC2547C51DBE30E80090C718 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2547C41DBE30E80090C718 /* Theme.swift */; };
 		BC5EFF5B1DC8519E00A467AE /* TwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5EFF591DC8519E00A467AE /* TwoCell.swift */; };
 		BC5EFF5C1DC8519E00A467AE /* TwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5EFF5A1DC8519E00A467AE /* TwoCell.xib */; };
+		BC67EAD61DEC3A73003BAF3D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC67EAD51DEC3A73003BAF3D /* Login.storyboard */; };
+		BC67EAD81DEC5191003BAF3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC67EAD71DEC5191003BAF3D /* LoginViewController.swift */; };
 		BC682F0F1DBF5E110025B976 /* ic_tab_discover_27x27_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC682EE51DBF5E110025B976 /* ic_tab_discover_27x27_@2x.png */; };
 		BC682F121DBF5E110025B976 /* ic_tab_discover_select_27x27_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC682EE81DBF5E110025B976 /* ic_tab_discover_select_27x27_@2x.png */; };
 		BC682F151DBF5E110025B976 /* ic_tab_home_27x27_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC682EEB1DBF5E110025B976 /* ic_tab_home_27x27_@2x.png */; };
@@ -179,6 +181,8 @@
 		BC3C7E3F1DE6A2D0006AB0DC /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		BC5EFF591DC8519E00A467AE /* TwoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoCell.swift; sourceTree = "<group>"; };
 		BC5EFF5A1DC8519E00A467AE /* TwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoCell.xib; sourceTree = "<group>"; };
+		BC67EAD51DEC3A73003BAF3D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BC67EAD71DEC5191003BAF3D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC682EE51DBF5E110025B976 /* ic_tab_discover_27x27_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tab_discover_27x27_@2x.png"; sourceTree = "<group>"; };
 		BC682EE81DBF5E110025B976 /* ic_tab_discover_select_27x27_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tab_discover_select_27x27_@2x.png"; sourceTree = "<group>"; };
 		BC682EEB1DBF5E110025B976 /* ic_tab_home_27x27_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tab_home_27x27_@2x.png"; sourceTree = "<group>"; };
@@ -487,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				BC7038BE1DD360AE0019D4A9 /* GuideViewController.swift */,
+				BC67EAD71DEC5191003BAF3D /* LoginViewController.swift */,
 			);
 			name = startView;
 			path = "homepage(首页)";
@@ -570,6 +575,7 @@
 				BCF3FE2A1DBA20770015EDCD /* AppDelegate.swift */,
 				BCF3FE2C1DBA20770015EDCD /* ViewController.swift */,
 				BCF3FE2E1DBA20770015EDCD /* Main.storyboard */,
+				BC67EAD51DEC3A73003BAF3D /* Login.storyboard */,
 				BCF3FE311DBA20770015EDCD /* Assets.xcassets */,
 				BCF3FE331DBA20770015EDCD /* LaunchScreen.storyboard */,
 				BCF3FE361DBA20770015EDCD /* Info.plist */,
@@ -967,6 +973,7 @@
 				BC682F351DBF5E110025B976 /* tab_30_up@2x.png in Resources */,
 				BC688F111DDC7BFE0094978F /* guideImage3_640x960_@1x.png in Resources */,
 				BCF735011DD5FEBD004C0600 /* ic_my_member_22x22_@3x.png in Resources */,
+				BC67EAD61DEC3A73003BAF3D /* Login.storyboard in Resources */,
 				BCB7814C1DC0B866008C7AE9 /* sdefaultImage.png in Resources */,
 				BCC8C9921DDC0A510022DDB7 /* details_share_qq_nopoint_53x52_@1x.png in Resources */,
 				BC16EDD01DD0B07A00E9D08B /* firstCell.xib in Resources */,
@@ -1142,6 +1149,7 @@
 				BCEEB4421DBE57CD00407B15 /* MainTabBarViewController.swift in Sources */,
 				BC7038BF1DD360AE0019D4A9 /* GuideViewController.swift in Sources */,
 				BCBB16C21DBDA8AC00BAA408 /* RefreshProtocol.swift in Sources */,
+				BC67EAD81DEC5191003BAF3D /* LoginViewController.swift in Sources */,
 				BC682F7F1DBFAB820025B976 /* UIView+Common.swift in Sources */,
 				BCD916BF1DD4A4FA00C4B891 /* CollectModel.swift in Sources */,
 				BC682F3B1DBF5F160025B976 /* DiscoverViewController.swift in Sources */,

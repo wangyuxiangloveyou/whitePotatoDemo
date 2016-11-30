@@ -12,7 +12,7 @@ import Alamofire
 import MJRefresh
 
 var currentUrl :String = movieUrl
-
+//let textFiled=UITextField()
 class HomePageViewController: BaseViewController{
     var dataArray:[AnyObject]=[]
     var currentPage=1
@@ -26,6 +26,15 @@ class HomePageViewController: BaseViewController{
         automaticallyAdjustsScrollViewInsets = false
         configUI()
         self.homeView!.loadData(currentUrl)
+//        let tapGestureRecongnizer=UITapGestureRecognizer.init(target: self, action: #selector(click(_:)))
+//        tapGestureRecongnizer.cancelsTouchesInView=false
+//        self.view.addGestureRecognizer(tapGestureRecongnizer)
+        view.endEditing(true)
+    }
+    
+    func click(tap:UITapGestureRecognizer){
+//    textFiled.resignFirstResponder()
+       
     }
     
     func configUI(){
